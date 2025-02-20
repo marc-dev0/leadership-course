@@ -386,3 +386,162 @@ window.onload = function() {
         logo.classList.add('animate__animated', 'animate__pulse');
     }
 };
+
+
+// Tab Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            
+            // Hide all tabs
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(`${tabId}-content`).classList.add('active');
+            button.classList.add('active');
+        });
+    });
+    
+    // Video Modal Functionality
+    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+    const modal = document.getElementById('video-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const youtubeFrame = document.getElementById('youtube-frame');
+    
+    videoThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            const videoUrl = thumbnail.getAttribute('data-video');
+            youtubeFrame.src = videoUrl;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+    
+    closeModal.addEventListener('click', () => {
+        youtubeFrame.src = '';
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            youtubeFrame.src = '';
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Audio Player Functionality
+    const playPauseBtn = document.getElementById('play-pause');
+    const prevBtn = document.getElementById('prev-track');
+    const nextBtn = document.getElementById('next-track');
+    const playlistItems = document.querySelectorAll('.playlist-item');
+    const albumArt = document.getElementById('album-art');
+    const trackTitle = document.getElementById('track-title');
+    const trackArtist = document.getElementById('track-artist');
+    
+    let isPlaying = false;
+    let currentTrack = 0;
+    const audioElement = new Audio();
+    
+    // Initialize first track
+    if (playlistItems.length > 0) {
+        loadTrack(0);
+    }
+    
+    function loadTrack(index) {
+        const track = playlistItems[index];
+        const trackSrc = track.getAttribute('data-src');
+        currentTrack = index;
+        
+        // Update active track in playlist
+        playlistItems.forEach(item => item.classList.remove('active'));
+        track.classList.add('active');
+        
+        // Update audio source
+        audioElement.src = trackSrc;
+        audioElement.load();
+        
+        // Update track info
+        trackTitle.textContent = track.querySelector('h4').textContent;
+        trackArtist.textContent = track.querySelector('p').textContent;
+        
+        // If player was playing, continue playing the new track
+        if (isPlaying) {
+            audioElement.play();
+        }
+    }
+    
+    playPauseBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            audioElement.pause();
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        } else {
+            audioElement.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        const newIndex = (currentTrack - 1 + playlistItems.length) % playlistItems.length;
+        loadTrack(newIndex);
+        if (isPlaying) {
+            audioElement.play();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        const newIndex = (currentTrack + 1) % playlistItems.length;
+        loadTrack(newIndex);
+        if (isPlaying) {
+            audioElement.play();
+        }
+    });
+    
+    // Allow clicking on playlist items
+    playlistItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            loadTrack(index);
+            isPlaying = true;
+            audioElement.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        });
+    });
+    
+    // Update progress bar
+    audioElement.addEventListener('timeupdate', () => {
+        const currentTime = audioElement.currentTime;
+        const duration = audioElement.duration;
+        
+        if (!isNaN(duration)) {
+            // Update progress bar
+            const progressPercent = (currentTime / duration) * 100;
+            document.querySelector('.progress').style.width = `${progressPercent}%`;
+            
+            // Update time displays
+            document.getElementById('current-time').textContent = formatTime(currentTime);
+            document.getElementById('duration').textContent = formatTime(duration);
+        }
+    });
+    
+    // Format time in MM:SS
+    function formatTime(seconds) {
+        const min = Math.floor(seconds / 60);
+        const sec = Math.floor(seconds % 60);
+        return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+    }
+    
+    // Auto play next track
+    audioElement.addEventListener('ended', () => {
+        const newIndex = (currentTrack + 1) % playlistItems.length;
+        loadTrack(newIndex);
+        audioElement.play();
+    });
+});

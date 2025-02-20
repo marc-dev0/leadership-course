@@ -443,6 +443,22 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
+.objectives-list li p {
+    margin: 0;
+    display: inline;
+}
+
+/* Para manejar la coma al inicio del párrafo */
+.objectives-list li p::before {
+    content: " ";  /* Espacio después del título */
+    display: inline;
+}
+
+/* Asegurar que todo el contenido tenga el mismo margen */
+.objectives-list li > * {
+    margin-bottom: 0.5rem;
+}
+
 /* Course topics */
 .course-topics {
     display: grid;
@@ -1452,4 +1468,302 @@ footer {
         color: black;
         border-top: 1pt solid #ddd;
     }
+}
+
+/* Sección Multimedia */
+.multimedia-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.multimedia-tabs {
+    display: flex;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 0.5rem;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.tab-button.active {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.tab-button:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(17, 63, 103, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.video-card:hover .play-button {
+    background-color: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    color: var(--primary-color);
+}
+
+.video-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Audio Player */
+.audio-player-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+    border-radius: 12px;
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#album-art {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-right: 1.5rem;
+}
+
+.track-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.track-info p {
+    color: #666;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+#play-pause {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 30%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+#current-time, #duration {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.playlist {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 1.5rem;
+}
+
+.playlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.playlist-item.active {
+    background-color: rgba(17, 63, 103, 0.1);
+}
+
+.playlist-item:hover {
+    background-color: rgba(17, 63, 103, 0.05);
+}
+
+.playlist-item-info h4 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.playlist-item-info p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close-modal:hover {
+    transform: scale(1.1);
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }

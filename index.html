@@ -5,364 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liderazgo Estratégico: Potencia tu Impacto Profesional</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #113f67;
-            --secondary-color: #38598b;
-            --accent-color: #a2a8d3;
-            --light-color: #e7eaf6;
-            --dark-color: #113f67;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: var(--light-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .logo-container img {
-            height: 80px;
-            margin-right: 1rem;
-        }
-        
-        .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header-content p.tagline {
-            font-size: 1.4rem;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--text-dark);
-            font-weight: bold;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        .cta-button:hover {
-            background-color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        section h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-color);
-        }
-        
-        .course-overview {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .course-overview {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .overview-text {
-            margin-bottom: 1.5rem;
-        }
-        
-        .overview-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .overview-image img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .target-audience {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-        
-        .audience-card {
-            flex: 1;
-            min-width: 250px;
-            background-color: var(--light-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--secondary-color);
-        }
-        
-        .audience-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .audience-card h3 i {
-            margin-right: 10px;
-        }
-        
-        .objectives-list {
-            list-style-type: none;
-        }
-        
-        .objectives-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .objectives-list li::before {
-            content: "➤";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
-        }
-        
-        .course-topics {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .topic-card {
-            background: linear-gradient(to bottom right, #fff, var(--light-color));
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--accent-color);
-        }
-        
-        .topic-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .topic-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.8rem;
-        }
-        
-        .topic-card h4 {
-            font-weight: normal;
-            font-style: italic;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .key-points {
-            list-style-type: none;
-        }
-        
-        .key-points li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.2rem;
-            position: relative;
-        }
-        
-        .key-points li::before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .social-proof {
-            background: linear-gradient(135deg, var(--light-color), white);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-dark);
-            transition: transform 0.3s ease;
-        }
-        
-        .social-link:hover {
-            transform: scale(1.05);
-        }
-        
-        .social-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 0.8rem;
-            font-size: 1.8rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(56, 89, 139, 0.2);
-        }
-        
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: block;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .footer-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-logo {
-            height: 50px;
-            margin: 0 15px;
-        }
-        
-        .copyright {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Social Media Fixed Bar -->
+    <div class="social-fixed-bar">
+        <a href="https://www.instagram.com/estrategicoliderazgo" target="_blank" class="social-fixed-icon instagram-bg" data-tooltip="Síguenos en Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/15hG2omSWC/?mibextid=wwXIfr" target="_blank" class="social-fixed-icon facebook-bg" data-tooltip="Visita nuestra página de Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://t.me/liderazgoestrategico" target="_blank" class="social-fixed-icon telegram-bg" data-tooltip="Únete a nuestro canal de Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://www.facebook.com/groups/479936785158510/?ref=share&mibextid=NSMWBT" target="_blank" class="social-fixed-icon community-bg" data-tooltip="Únete a nuestra comunidad">
+            <i class="fas fa-users"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <img src="/api/placeholder/150/150" alt="Logo del Curso de Liderazgo Estratégico" />
-        </div>
-        <div class="header-content">
-            <h1>Liderazgo Estratégico</h1>
-            <p class="tagline">"Lidera con propósito, inspira con pasión"</p>
-            <a href="#contact" class="cta-button">¡Inscríbete ahora!</a>
+        <div class="header-bg"></div>
+        <div class="header-content-wrapper">
+            <div class="logo-container">
+                <img src="https://i.imgur.com/YJOX1Um.png" alt="Logo del Curso de Liderazgo Estratégico" class="logo-image animate__animated animate__fadeIn">
+            </div>
+            <div class="header-content animate__animated animate__fadeInUp">
+                <h1>Liderazgo Estratégico</h1>
+                <p class="tagline">"Lidera con propósito, inspira con pasión"</p>
+                <a href="#contact" class="cta-button" id="headerCta">¡Inscríbete ahora!</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="overview">
+        <!-- Course Overview -->
+        <section id="overview" class="reveal">
             <h2>Potencia tu Impacto Profesional</h2>
             <div class="course-overview">
                 <div class="overview-text">
@@ -371,15 +56,16 @@
                     <p>Al finalizar este curso, estarás capacitado para diseñar, implementar y monitorear estrategias efectivas, utilizando indicadores clave de desempeño (KPIs) y fomentando la innovación como motor del éxito organizacional.</p>
                 </div>
                 <div class="overview-image">
-                    <img src="/api/placeholder/500/300" alt="Imagen representativa del curso de liderazgo" />
+                    <img src="https://i.imgur.com/Q9P4vfD.jpg" alt="Imagen representativa del curso de liderazgo" class="animate-on-scroll">
                 </div>
             </div>
         </section>
 
-        <section id="audience">
+        <!-- Target Audience -->
+        <section id="audience" class="reveal">
             <h2>¿Para quién está diseñado este curso?</h2>
             <div class="target-audience">
-                <div class="audience-card">
+                <div class="audience-card animate-on-scroll">
                     <h3><i class="fas fa-user-tie"></i> Perfil Demográfico</h3>
                     <ul>
                         <li>Edad: 25-50 años</li>
@@ -387,7 +73,7 @@
                         <li>Profesión: Gerentes, directivos, mandos medios, emprendedores</li>
                     </ul>
                 </div>
-                <div class="audience-card">
+                <div class="audience-card animate-on-scroll" data-delay="200">
                     <h3><i class="fas fa-brain"></i> Perfil Psicográfico</h3>
                     <ul>
                         <li>Valores: Crecimiento, innovación, liderazgo, mejora continua</li>
@@ -395,7 +81,7 @@
                         <li>Actitud: Abiertos al cambio y adaptables</li>
                     </ul>
                 </div>
-                <div class="audience-card">
+                <div class="audience-card animate-on-scroll" data-delay="400">
                     <h3><i class="fas fa-chart-line"></i> Perfil Socioeconómico</h3>
                     <ul>
                         <li>Ingresos: Clase media alta y alta</li>
@@ -406,21 +92,33 @@
             </div>
         </section>
 
-        <section id="objectives">
+        <!-- Course Objectives -->
+        <section id="objectives" class="reveal">
             <h2>Objetivos del Curso</h2>
             <ul class="objectives-list">
-                <li><strong>Implementar estrategias organizacionales transformacionales</strong>, dotando a los líderes de herramientas para diseñar, ejecutar y monitorear iniciativas de cambio significativo, establecer indicadores clave de desempeño (KPIs) relevantes para medir el progreso e impacto.</li>
-                <li><strong>Fortalecer competencias en comunicación estratégica y persuasiva</strong>, capacitando a los líderes para articular mensajes de alto impacto adaptados a diversas audiencias, gestionar conversaciones difíciles en entornos multiculturales, y construir relaciones colaborativas interdepartamentales basadas en la confianza mutua.</li>
-                <li><strong>Implementar metodologías avanzadas para la gestión de equipos diversos y distribuidos</strong>, permitiendo a los directivos identificar y potenciar talentos individuales, diseñar estructuras de trabajo flexibles que promuevan la autonomía responsable.</li>
-                <li><strong>Desarrollar sistemas robustos de toma de decisiones basadas en datos e insights estratégicos</strong>, capacitando a los participantes para analizar problemas complejos mediante pensamiento crítico y marcos analíticos estructurados.</li>
-                <li><strong>Fomentar ecosistemas de innovación continua</strong> que potencien la adaptabilidad organizacional, facilitando la evolución cultural necesaria para prosperar en mercados dinámicos.</li>
+                <li class="animate-on-scroll">
+                    <strong>Implementar estrategias organizacionales transformacionales</strong>, dotando a los líderes de herramientas para diseñar, ejecutar y monitorear iniciativas de cambio significativo, establecer indicadores clave de desempeño (KPIs) relevantes para medir el progreso e impacto.
+                </li>
+                <li class="animate-on-scroll" data-delay="200">
+                    <strong>Fortalecer competencias en comunicación estratégica y persuasiva</strong>, capacitando a los líderes para articular mensajes de alto impacto adaptados a diversas audiencias, gestionar conversaciones difíciles en entornos multiculturales, y construir relaciones colaborativas interdepartamentales basadas en la confianza mutua.
+                </li>
+                <li class="animate-on-scroll" data-delay="400">
+                    <strong>Implementar metodologías avanzadas para la gestión de equipos diversos y distribuidos</strong>, permitiendo a los directivos identificar y potenciar talentos individuales, diseñar estructuras de trabajo flexibles que promuevan la autonomía responsable.
+                </li>
+                <li class="animate-on-scroll" data-delay="600">
+                    <strong>Desarrollar sistemas robustos de toma de decisiones basadas en datos e insights estratégicos</strong>, capacitando a los participantes para analizar problemas complejos mediante pensamiento crítico y marcos analíticos estructurados.
+                </li>
+                <li class="animate-on-scroll" data-delay="800">
+                    <strong>Fomentar ecosistemas de innovación continua</strong> que potencien la adaptabilidad organizacional, facilitando la evolución cultural necesaria para prosperar en mercados dinámicos.
+                </li>
             </ul>
         </section>
 
-        <section id="curriculum">
+        <!-- Course Curriculum -->
+        <section id="curriculum" class="reveal">
             <h2>Temario del Curso</h2>
             <div class="course-topics">
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll">
                     <h3>1. Introducción al Liderazgo Estratégico</h3>
                     <h4>Objetivo: Comprender los fundamentos del liderazgo estratégico</h4>
                     <ul class="key-points">
@@ -429,7 +127,7 @@
                         <li>Importancia de la visión y planificación estratégica</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="100">
                     <h3>2. Autoconocimiento y Desarrollo Personal</h3>
                     <h4>Objetivo: Explorar herramientas para el autodescubrimiento</h4>
                     <ul class="key-points">
@@ -438,7 +136,7 @@
                         <li>Fomentar la autoconfianza como líder</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="200">
                     <h3>3. Comunicación Estratégica y Persuasiva</h3>
                     <h4>Objetivo: Aprender a comunicarte con claridad e impacto</h4>
                     <ul class="key-points">
@@ -447,7 +145,7 @@
                         <li>Construcción de confianza a través de la transparencia</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="300">
                     <h3>4. Toma de Decisiones Estratégicas</h3>
                     <h4>Objetivo: Desarrollar capacidad de análisis y decisión</h4>
                     <ul class="key-points">
@@ -456,7 +154,7 @@
                         <li>Uso de datos y análisis en la toma de decisiones</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="400">
                     <h3>5. Gestión de Equipos de Alto Rendimiento</h3>
                     <h4>Objetivo: Liderar equipos diversos y maximizar rendimiento</h4>
                     <ul class="key-points">
@@ -465,7 +163,7 @@
                         <li>Resolución de problemas en equipo</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="500">
                     <h3>6. Innovación y Liderazgo en Entorno Cambiante</h3>
                     <h4>Objetivo: Prepararte para liderar en contextos dinámicos</h4>
                     <ul class="key-points">
@@ -474,7 +172,7 @@
                         <li>Estrategias para liderar durante transformaciones</li>
                     </ul>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card animate-on-scroll" data-delay="600">
                     <h3>7. Plan Estratégico de Liderazgo Personal</h3>
                     <h4>Objetivo: Crear un plan personalizado de desarrollo</h4>
                     <ul class="key-points">
@@ -486,57 +184,211 @@
             </div>
         </section>
 
-        <section id="social" class="social-proof">
+        <!-- Social Media -->
+        <section id="social" class="social-proof reveal">
             <h2>Conéctate con nosotros</h2>
             <p class="overview-text">Síguenos en redes sociales para estar al día de las últimas novedades, compartir experiencias y formar parte de nuestra comunidad de líderes.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/estrategicoliderazgo" class="social-link" target="_blank">
-                    <div class="social-icon">
+                <a href="https://www.instagram.com/estrategicoliderazgo" class="social-link animate-on-scroll" target="_blank">
+                    <div class="social-icon instagram-bg">
                         <i class="fab fa-instagram"></i>
                     </div>
-                    <span>Instagram</span>
+                    <span class="social-platform">Instagram</span>
+                    <span class="social-description">Contenido inspirador e informativo</span>
                 </a>
-                <a href="https://www.facebook.com/share/15hG2omSWC/?mibextid=wwXIfr" class="social-link" target="_blank">
-                    <div class="social-icon">
+                <a href="https://www.facebook.com/share/15hG2omSWC/?mibextid=wwXIfr" class="social-link animate-on-scroll" data-delay="200" target="_blank">
+                    <div class="social-icon facebook-bg">
                         <i class="fab fa-facebook-f"></i>
                     </div>
-                    <span>Facebook</span>
+                    <span class="social-platform">Facebook</span>
+                    <span class="social-description">Eventos y actualizaciones</span>
                 </a>
-                <a href="https://www.facebook.com/groups/479936785158510/?ref=share&mibextid=NSMWBT" class="social-link" target="_blank">
-                    <div class="social-icon">
+                <a href="https://t.me/liderazgoestrategico" class="social-link animate-on-scroll" data-delay="400" target="_blank">
+                    <div class="social-icon telegram-bg">
+                        <i class="fab fa-telegram-plane"></i>
+                    </div>
+                    <span class="social-platform">Telegram</span>
+                    <span class="social-description">Canal exclusivo de recursos</span>
+                </a>
+                <a href="https://www.facebook.com/groups/479936785158510/?ref=share&mibextid=NSMWBT" class="social-link animate-on-scroll" data-delay="600" target="_blank">
+                    <div class="social-icon community-bg">
                         <i class="fas fa-users"></i>
                     </div>
-                    <span>Comunidad</span>
+                    <span class="social-platform">Comunidad</span>
+                    <span class="social-description">Grupo de networking</span>
                 </a>
             </div>
         </section>
 
-        <section id="contact">
+        <!-- Testimonials -->
+        <section id="testimonials" class="reveal">
+            <h2>Lo que dicen nuestros estudiantes</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">Este curso transformó mi forma de liderar equipos. Las herramientas que aprendí me permitieron mejorar la comunicación y aumentar la productividad de mi departamento en un 30%.</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.imgur.com/W9Cyttv.jpg" alt="Foto de María González" class="testimonial-avatar">
+                                <div class="testimonial-info">
+                                    <h4>María González</h4>
+                                    <p>Gerente de Operaciones, Tecnova S.A.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">La metodología práctica del curso me permitió implementar lo aprendido desde el primer día. El enfoque en la inteligencia emocional fue especialmente valioso para gestionar mi equipo durante la transformación digital de nuestra empresa.</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.imgur.com/mN0yAzh.jpg" alt="Foto de Carlos Mendoza" class="testimonial-avatar">
+                                <div class="testimonial-info">
+                                    <h4>Carlos Mendoza</h4>
+                                    <p>Director de Innovación, GlobalTech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">Como emprendedora, necesitaba herramientas para liderar mi startup en crecimiento. Este curso me dio exactamente lo que necesitaba: estrategias claras, técnicas de comunicación efectiva y métodos para desarrollar una cultura organizacional sólida.</p>
+                            <div class="testimonial-author">
+                                <img src="https://i.imgur.com/D0rVtTR.jpg" alt="Foto de Ana Suárez" class="testimonial-avatar">
+                                <div class="testimonial-info">
+                                    <h4>Ana Suárez</h4>
+                                    <p>CEO & Fundadora, EcoInnovation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button id="prevTestimonial" aria-label="Testimonio anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="nextTestimonial" aria-label="Testimonio siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="testimonial-dot active" data-index="0"></span>
+                    <span class="testimonial-dot" data-index="1"></span>
+                    <span class="testimonial-dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="reveal">
             <h2>¡Inscríbete ahora!</h2>
-            <div class="contact-form">
-                <form action="#" method="POST" id="registration-form">
-                    <div class="form-group">
-                        <label for="name">Nombre completo</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+            <div class="contact-form-container">
+                <div class="form-steps">
+                    <div class="form-step active" id="step1">
+                        <div class="step-number">1</div>
+                        <span class="step-label">Información Personal</span>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="form-step" id="step2">
+                        <div class="step-number">2</div>
+                        <span class="step-label">Información Profesional</span>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" class="form-control">
+                    <div class="form-step" id="step3">
+                        <div class="step-number">3</div>
+                        <span class="step-label">Confirmar</span>
                     </div>
-                    <div class="form-group">
-                        <label for="company">Empresa/Organización</label>
-                        <input type="text" id="company" name="company" class="form-control">
+                </div>
+                
+                <form id="registration-form">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-panel active" id="panel1">
+                        <div class="form-group">
+                            <label for="name">Nombre completo <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Ingresa tu nombre y apellidos" required>
+                            <span class="error-message" id="nameError">El nombre es obligatorio</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="correo@ejemplo.com" required>
+                            <span class="error-message" id="emailError">Ingresa un correo electrónico válido</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+51 999 888 777" required>
+                            <span class="error-message" id="phoneError">Ingresa un número de teléfono válido</span>
+                        </div>
+                        <div class="form-buttons">
+                            <div></div> <!-- Empty div for spacing -->
+                            <button type="button" class="form-btn btn-next" id="toStep2">Siguiente <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">¿Por qué estás interesado en este curso?</label>
-                        <textarea id="message" name="message" class="form-control"></textarea>
+                    
+                    <!-- Step 2: Professional Information -->
+                    <div class="form-panel" id="panel2">
+                        <div class="form-group">
+                            <label for="company">Empresa/Organización</label>
+                            <input type="text" id="company" name="company" class="form-control" placeholder="Nombre de tu empresa u organización">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Cargo actual</label>
+                            <input type="text" id="position" name="position" class="form-control" placeholder="Tu posición o cargo actual">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Años de experiencia</label>
+                            <select id="experience" name="experience" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="0-2">0-2 años</option>
+                                <option value="3-5">3-5 años</option>
+                                <option value="6-10">6-10 años</option>
+                                <option value="10+">Más de 10 años</option>
+                            </select>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="form-btn btn-prev" id="backToStep1"><i class="fas fa-arrow-left"></i> Anterior</button>
+                            <button type="button" class="form-btn btn-next" id="toStep3">Siguiente <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <button type="submit" class="submit-btn">Enviar solicitud</button>
+                    
+                    <!-- Step 3: Confirmation -->
+                    <div class="form-panel" id="panel3">
+                        <div class="form-group">
+                            <label for="motivation">¿Por qué estás interesado en este curso? <span class="required">*</span></label>
+                            <textarea id="motivation" name="motivation" class="form-control" placeholder="Cuéntanos brevemente tus objetivos y expectativas..." required></textarea>
+                            <span class="error-message" id="motivationError">Por favor comparte tus motivaciones</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="referral">¿Cómo te enteraste de nosotros?</label>
+                            <select id="referral" name="referral" class="form-control">
+                                <option value="">Selecciona una opción</option>
+                                <option value="social">Redes sociales</option>
+                                <option value="friend">Recomendación</option>
+                                <option value="search">Buscador</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                Acepto los términos y condiciones
+                            </label>
+                            <span class="error-message" id="termsError">Debes aceptar los términos y condiciones</span>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="form-btn btn-prev" id="backToStep2"><i class="fas fa-arrow-left"></i> Anterior</button>
+                            <button type="submit" class="form-btn btn-submit" id="submitForm">Enviar solicitud <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
                 </form>
+                
+                <!-- Success Message (initially hidden) -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="success-title">¡Registro completado con éxito!</h3>
+                    <p class="success-text">Gracias por tu interés en nuestro curso. Hemos recibido tu información y nos pondremos en contacto contigo pronto para los siguientes pasos.</p>
+                    <p class="success-text">Mientras tanto, te invitamos a seguirnos en redes sociales para recibir contenido exclusivo sobre liderazgo.</p>
+                    <a href="#social" class="success-cta">Conecta con nosotros</a>
+                </div>
             </div>
         </section>
     </main>
@@ -544,20 +396,27 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logos">
-                <img src="/api/placeholder/120/60" alt="Logo de la Universidad" class="footer-logo" />
+                <img src="https://i.imgur.com/YJOX1Um.png" alt="Logo de Liderazgo Estratégico" class="footer-logo">
             </div>
-            <p>"Lidera con propósito, inspira con pasión"</p>
-            <p>Grupo 3 - Desarrollo Humano (Liderazgo y Sostenibilidad)</p>
-            <p class="copyright">© 2025 Todos los derechos reservados | Lima, Perú</p>
+            <div class="footer-info">
+                <p class="footer-tagline">"Lidera con propósito, inspira con pasión"</p>
+                <p>Grupo 3 - Desarrollo Humano (Liderazgo y Sostenibilidad)</p>
+                <div class="footer-nav">
+                    <a href="#overview">Inicio</a>
+                    <a href="#objectives">Objetivos</a>
+                    <a href="#curriculum">Temario</a>
+                    <a href="#contact">Inscripción</a>
+                </div>
+                <div class="footer-contact">
+                    <div><i class="fas fa-envelope"></i> info@liderazgoestrategico.com</div>
+                    <div><i class="fas fa-phone"></i> +51 999 888 777</div>
+                    <div><i class="fas fa-map-marker-alt"></i> Lima, Perú</div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Liderazgo Estratégico | Todos los derechos reservados</p>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu interés! Tu información ha sido recibida. Te contactaremos pronto.');
-            this.reset();
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
